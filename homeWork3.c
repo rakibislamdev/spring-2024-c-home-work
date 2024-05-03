@@ -2,20 +2,22 @@
 
 int main()
 {
-    int i, space, rows = 5;
+    int rows = 5;
+    int i, j, k = 0;
 
-    for (i = 1; i <= rows; ++i)
+    for (i = 1; i <= rows; ++i, k = 0)
     {
         // Print spaces
-        for (space = 1; space <= rows - i; ++space)
+        for (j = 1; j <= rows - i; ++j)
         {
             printf(" ");
         }
 
         // Print stars
-        for (int j = 1; j <= i; ++j)
+        while (k != 2 * i - 1)
         {
-            printf(" *");
+            printf("* ");
+            ++k;
         }
 
         printf("\n");
